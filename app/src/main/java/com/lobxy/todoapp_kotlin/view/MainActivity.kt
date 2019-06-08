@@ -20,6 +20,8 @@ import com.lobxy.todoapp_kotlin.model.Todo
 
 class MainActivity : AppCompatActivity() {
 
+    //TODO: 1. pass data to detail. 2. Swipe to delete 3.implement clicklistener
+
     private lateinit var mAuth: FirebaseAuth
 
     private var mUid: String = ""
@@ -76,6 +78,17 @@ class MainActivity : AppCompatActivity() {
             }
         }
         mRecyclerView.adapter = mAdapter
+
+        //pass data to detail activity.
+//        val i: Intent = Intent(this@MainActivity, NoteDetailActivity::class.java)
+//        var bundle = Bundle()
+//        bundle.putString("title", title)
+//        bundle.putString("desc", itemDesc)
+//        bundle.putString("pushId", pushId)
+//        bundle.putString("completed", completed)
+//        i.putExtras(bundle)
+//        startActivity(i)
+
     }
 
     private fun checkUserData() {
